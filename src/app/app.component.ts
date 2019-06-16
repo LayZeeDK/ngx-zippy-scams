@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   `,
 })
 export class AppComponent {
-  title = 'view engine';
+  title = 'single component angular modules';
 }
