@@ -1,4 +1,10 @@
-import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+  Directive,
+  EventEmitter,
+  HostListener,
+  NgModule,
+  Output,
+} from '@angular/core';
 
 @Directive({
   selector: '[appButton]',
@@ -13,3 +19,9 @@ export class ButtonDirective {
     this.appClick.emit();
   }
 }
+
+@NgModule({
+  declarations: [ButtonDirective],
+  exports: [ButtonDirective],
+})
+export class ButtonModule {}

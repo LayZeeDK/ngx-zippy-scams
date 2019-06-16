@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { NgModule, Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'capitalize',
@@ -11,3 +11,9 @@ export class CapitalizePipe implements PipeTransform {
       .join(' ');
   }
 }
+
+@NgModule({
+  declarations: [CapitalizePipe],
+  exports: [CapitalizePipe],
+})
+export class CapitalizeModule {}

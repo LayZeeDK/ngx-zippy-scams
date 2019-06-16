@@ -1,21 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ZippyComponent } from './zippy.component';
-import { ButtonDirective } from './button.directive';
-import { CapitalizePipe } from './capitalize.pipe';
+import { CapitalizeModule } from './capitalize.pipe';
+import { ZippyModule } from './zippy.component';
 
 @NgModule({
   bootstrap: [AppComponent],
-  declarations: [
-    AppComponent,
-    ButtonDirective,
-    CapitalizePipe,
-    ZippyComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
+    CapitalizeModule,
+    ZippyModule,
   ],
 })
 export class AppModule {}

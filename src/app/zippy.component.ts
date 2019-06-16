@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
+
+import { ButtonModule } from './button.directive';
 
 @Component({
   selector: 'app-zippy',
@@ -22,3 +24,12 @@ export class ZippyComponent {
     this.isExpanded = !this.isExpanded;
   }
 }
+
+@NgModule({
+  declarations: [ZippyComponent],
+  exports: [ZippyComponent],
+  imports: [
+    ButtonModule,
+  ],
+})
+export class ZippyModule {}
